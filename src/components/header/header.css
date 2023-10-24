@@ -1,0 +1,55 @@
+:root {
+  --headerColor: #576f72;
+  --textColor: #fff7d4;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: var(--headerColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  margin-bottom: 10px;
+}
+
+.logo {
+  height: 120px;
+  margin-top: 10px;
+  margin-right: 10px; /* Updated from margin-left */
+}
+
+.nav {
+  background-color: var(--headerColor);
+  margin-top: 0;
+  flex-grow: 1; /* Added to occupy remaining space */
+  display: flex; /* Added to align items horizontally */
+  justify-content: flex-end; /* Added to align items to the right */
+  align-items: center; /* Added to vertically center items */
+}
+
+nav a {
+  margin-right: 1rem; /* Updated from margin */
+  color: var(--textColor);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+  color: rgb(241, 213, 56);
+  background-color: var(--headerColor);
+}
+
+.userName-header {
+  margin-left: 20px; /* Updated from -10px */
+  color: var(--textColor);
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}

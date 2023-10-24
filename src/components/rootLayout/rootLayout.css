@@ -1,0 +1,11 @@
+.bottomBoard {
+    position:absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: var(--headerColor); 
+    align-items: center;   
+    text-align: center; 
+    color: #fff;
+}
