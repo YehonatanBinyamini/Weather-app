@@ -1,18 +1,25 @@
-import { createStore } from 'redux'
-import WeatherData from '../models/WeatherData'
+import { createSlice, configureStore } from '@reduxjs/toolkit'
+// import WeatherData from '../models/WeatherData'
 
-const favoritesReducer = (state = [new WeatherData('tel aviv', '23', 'daily', "icon ", '3333')], action) => {
-    if (action.type === "add") {
-        return [...state, action.newObject];
-    }
+    const initialState = [{city: 'Haifa', temperature: '31', description: 'daily', icon: "icon ", key: '3333'}];
+    const favoritesSlice = createSlice({
+        name: 'favorites',
+        initialState,
+        reducers: {
+            add(state, action){
+                return [...state,action.payload]
+            },
+            delete(state, action){
+                const updatedState = state.filter( item => item.key !== action.payload)
+                return updatedState;
+            }
+        }
 
-    if (action.type === "delete") {
-        const updatedFavorites = state.filter(item => item.key !== action.key);
-        return [...updatedFavorites];
-    }
+    })  
 
-    return state;
-};
+export const favoritesActions = favoritesSlice.actions;
 
+export const store = configureStore({
+    reducer: favoritesSlice.reducer
+})
 
-export const store = createStore(favoritesReducer)

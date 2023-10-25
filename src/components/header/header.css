@@ -19,22 +19,27 @@
 }
 
 .logo {
-  height: 120px;
+  height: 70px;
   margin-top: 10px;
-  margin-right: 10px; /* Updated from margin-left */
+  margin-left: 10px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  
 }
 
 .nav {
-  background-color: var(--headerColor);
   margin-top: 0;
-  flex-grow: 1; /* Added to occupy remaining space */
-  display: flex; /* Added to align items horizontally */
-  justify-content: flex-end; /* Added to align items to the right */
-  align-items: center; /* Added to vertically center items */
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
 }
 
 nav a {
-  margin-right: 1rem; /* Updated from margin */
+  margin-right: 1rem; 
   color: var(--textColor);
   text-decoration: none;
   font-weight: bold;
@@ -46,8 +51,8 @@ nav a.active {
   background-color: var(--headerColor);
 }
 
-.userName-header {
-  margin-left: 20px; /* Updated from -10px */
+.text-header {
+  margin-right: 20px; 
   color: var(--textColor);
   margin-bottom: 10px;
   font-weight: bold;

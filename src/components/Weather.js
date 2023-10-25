@@ -2,6 +2,7 @@ import React from "react";
 import { api_key } from "../assets/api_key";
 
 export default function Weather() {
+    
   const getCity = async (city) => {
     const baseUrl = "http://dataservice.accuweather.com/locations/v1/cities/autocomplete";
     const query = `?apikey=${api_key}&q=${city}`;
