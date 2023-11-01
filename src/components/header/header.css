@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  overflow: hidden;
   height: 5rem;
   background-color: var(--headerColor);
   display: flex;
@@ -27,34 +28,64 @@
 .logo-container {
   display: flex;
   flex-direction: row;
-  
+}
+
+.logo-container:active {
+
 }
 
 .nav {
+  flex-grow: 1;
   margin-top: 0;
   margin-left: 15px;
   display: flex;
   flex-direction: row;
-  align-items: center; 
+  align-items: center;
 }
 
-nav a {
-  margin-right: 1rem; 
+.nav-link {
+  margin-bottom: 0;
+}
+
+nav a, nav .nav-link {
+  margin-right: 1rem;
   color: var(--textColor);
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
 }
 
 nav a:hover,
-nav a.active {
+nav a.active,
+.nav-link:hover,
+.nav-link.active {
   color: rgb(241, 213, 56);
   background-color: var(--headerColor);
 }
 
 .text-header {
-  margin-right: 20px; 
+  margin-right: 30px;
   color: var(--textColor);
   margin-bottom: 10px;
   font-weight: bold;
   text-decoration: none;
+}
+
+
+@media (max-width: 500px) {
+  .header {
+    height: 6rem; /* Adjust height for smaller screens */
+  }
+
+  .nav {
+    font-size: 1rem;
+  }
+
+  .logo {
+    height: 60px; /* Adjust logo size for smaller screens */
+  }
+
+  .text-header{
+    display: none;
+  }
 }

@@ -1,0 +1,109 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    /* padding-left: 30px; */
+    margin-top: 30px;
+}
+
+.search input {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    padding-left: 25px;
+    color: #343333;
+    font-size: 20px;
+    font-weight: 400;
+    /* background: #ebfffc; */
+}
+
+.progress {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 40px;
+    background: white;
+    cursor: pointer;
+    color: #343333;
+    transition: all 0.3s ease; /* Adding a smooth transition for the effects */
+}
+
+.search-icon:hover {
+    background: #b0b0b0; /* Change background color on hover */
+}
+
+.search-icon:active {
+    background: #ccc; /* Change background color when pressed */
+    transform: scale(0.95); /* Apply a slight scaling effect when pressed */
+}
+
+
+.switch-unit-btn {
+    margin-top: 2rem;
+  align-items: center;
+  background-color: #add8e6;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 2.5rem;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 35%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+}
+
+.switch-unit-btn:hover {
+  background: #5794a8;
+  color: #fff;
+}
+
+.switch-unit-btn:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+
+
+@media (max-width: 500px) {
+    .search {
+        display: flex;
+        justify-content: center;
+        padding: auto;
+        align-items: center;
+        
+    }
+
+    .search input {
+        width: 9rem;
+        height: 3rem;
+    }
+
+    .switch-unit-btn{
+        width: 40%;
+    }
+}
+

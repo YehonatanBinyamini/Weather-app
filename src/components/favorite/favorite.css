@@ -1,0 +1,66 @@
+.favorite-box {
+    width: 80%;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #b4c4c4;
+    margin-bottom: 1rem;
+  
+    @media (max-width: 500px) {
+      height: auto;
+      .description-typo {
+        display: none;
+      }
+    }
+  
+    &:hover {
+      background-color: #aad5f5;
+    }
+  }
+  
+  .city-typo {
+    flex: 1;
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  
+  .temperature-typo {
+    flex: 1;
+    text-align: center;
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
+  
+  .description-typo {
+    flex: 1;
+    text-align: center;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .img-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .img-container img {
+    width: 4rem;
+    margin-right: 0.5rem;
+  }
+  
+  @media (min-width: 501px) {
+    .img-container img {
+      width: 7rem;
+      margin-right: 5rem;
+    }
+  }
+  
+  .delete-btn {
+    color: red;
+  }
+  

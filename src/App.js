@@ -1,11 +1,10 @@
-import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import Weather from './components/Weather';
-import Home from './pages/home/Home';
-import Favorites from './pages/Favorites';
-import RootLayout from './components/rootLayout/RootLayout'
-import Error from './pages/Error';
-
+import Home from "./pages/home/Home";
+import Favorites from "./pages/favorites/Favorites";
+import RootLayout from "./components/rootLayout/RootLayout";
+import Error from "./pages/errorPage/Error";
 
 const router = createBrowserRouter([
   {

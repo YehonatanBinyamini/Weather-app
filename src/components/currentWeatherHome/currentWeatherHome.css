@@ -1,0 +1,79 @@
+.current-weather-home-container{
+    width: 18.5rem;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 4rem;
+}
+
+.mobile-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.CW-icon{
+    width: 14rem;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.label-temp {
+    font-weight: 500;
+}
+
+.label-description{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+label {
+    margin-bottom: 1rem;
+}
+
+.city-name {
+    font-size: 2.5rem;
+    margin-right: 0.9rem;
+}
+
+.icon-img {
+    display: flex;
+    width: calc(100% - 2rem); /* 1rem from both right and left */
+    padding: 0 1rem;
+    margin: 0 -3rem;
+}
+
+@media (max-width: 500px) {
+    .current-weather-home-container{
+        display: flex;
+        font-size: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-right: 0;
+    
+    }
+
+    .mobile-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .CW-icon{
+        margin-top: -4rem;
+    }
+}
