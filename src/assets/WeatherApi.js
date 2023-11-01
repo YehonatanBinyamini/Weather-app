@@ -3,7 +3,7 @@ import { api_key } from "./api_key";
 const getCity = async (city) => {
   try {
     const baseUrl =
-      "http://dataservice.accuweather.com/locations/v1/cities/autocomplete";
+      "https://dataservice.accuweather.com/locations/v1/cities/autocomplete";
     const query = `?apikey=${api_key}&q=${city}`;
     const url = baseUrl + query;
     const res = await fetch(url);
@@ -17,7 +17,7 @@ const getCity = async (city) => {
 
 export const getCurrentWeather = async (locationKey) => {
   try {
-    const baseUrl = "http://dataservice.accuweather.com/currentconditions/v1/";
+    const baseUrl = "https://dataservice.accuweather.com/currentconditions/v1/";
     const query = `${locationKey}?apikey=${api_key}`;
     const url = baseUrl + query;
     const res = await fetch(url);
@@ -32,7 +32,7 @@ export const getCurrentWeather = async (locationKey) => {
 const get5DaysWeather = async (locationKey, withMetric) => {
   try {
     const baseUrl =
-      "http://dataservice.accuweather.com/forecasts/v1/daily/5day/";
+      "https://dataservice.accuweather.com/forecasts/v1/daily/5day/";
     const query = withMetric
       ? `${locationKey}?apikey=${api_key}&metric=true`
       : `${locationKey}?apikey=${api_key}`;
