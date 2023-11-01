@@ -17,21 +17,10 @@ const CardComponent = ({
   return (
     <Card
       variant="outlined"
-      style={{
-        minWidth: 200,
-        margin: 15,
-        borderRadius: "15px",
-        minHeight: 200,
-        alignContent: "center",
-        background: "#add8e6",
-      }}
+      style={classes.muiCard}
     >
       <CardContent
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+        style={classes.cardContent}
       >
         <Typography variant="h4" fontWeight={500} component="div">
           {day}
@@ -56,3 +45,20 @@ const CardComponent = ({
 };
 
 export default CardComponent;
+
+const classes = {
+  muiCard: {
+    minWidth: 200,
+    margin: 15,
+    borderRadius: "15px",
+    minHeight: 200,
+    alignContent: "center",
+    background: "#add8e6",
+  },
+
+cardContent: {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+}
+}
