@@ -47,12 +47,8 @@ const get5DaysWeather = async (locationKey, withMetric) => {
 };
 
 export const getIconSrc = (iconNumber) => {
-  if (iconNumber < 10) {
-    iconNumber = "0" + iconNumber;
-  }
-  const baseUrl = "https://developer.accuweather.com/sites/default/files/";
-  const query = `${iconNumber}-s.png`;
-  return baseUrl + query;
+  const n = String(iconNumber).padStart(2, "0");
+  return `https://apidev.accuweather.com/developers/Media/Default/WeatherIcons/${n}-s.png`;
 };
 
 export async function getAllData(cityName) {
@@ -69,22 +65,22 @@ export async function getAllData(cityName) {
           minTemperatureInC: Math.round(day.Temperature.Minimum.Value),
           maxTemperatureInC: Math.round(day.Temperature.Maximum.Value),
           minTemperatureInF: Math.round(
-            weatherData_F.DailyForecasts[index].Temperature.Minimum.Value
+            weatherData_F.DailyForecasts[index].Temperature.Minimum.Value,
           ),
           maxTemperatureInF: Math.round(
-            weatherData_F.DailyForecasts[index].Temperature.Maximum.Value
+            weatherData_F.DailyForecasts[index].Temperature.Maximum.Value,
           ),
           icon: getIconSrc(day.Day.Icon),
         };
-      }
+      },
     );
     const currentWeatherDataFromApi = await getCurrentWeather(cityData.Key);
     const currentWeatherData = {
       temperatureInC: Math.round(
-        currentWeatherDataFromApi.Temperature.Metric.Value
+        currentWeatherDataFromApi.Temperature.Metric.Value,
       ),
       temperatureInF: Math.round(
-        currentWeatherDataFromApi.Temperature.Imperial.Value
+        currentWeatherDataFromApi.Temperature.Imperial.Value,
       ),
       description: currentWeatherDataFromApi.WeatherText,
       icon: getIconSrc(currentWeatherDataFromApi.WeatherIcon),
