@@ -24,12 +24,13 @@ export default function Home() {
     setSearchValue(value);
   };
 
-  const handleSearchClick = () => {
-    if (searchValue.length > 0){
+  const handleSearchClick = (value) => {
+    const query = typeof value === "string" ? value : searchValue;
+    if (query && query.length > 0) {
       setIsLoading(true);
-      fetchData(searchValue.toLowerCase()).catch((error) => {
+      fetchData(query.toLowerCase()).catch((error) => {
         setIsLoading(false);
-        setError(error.message); 
+        setError(error.message);
       });
     }
   };

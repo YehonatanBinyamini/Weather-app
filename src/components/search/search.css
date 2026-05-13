@@ -52,6 +52,73 @@
     transform: scale(0.95); /* Apply a slight scaling effect when pressed */
 }
 
+/* Suggestions dropdown */
+.search {
+    position: relative; /* container for absolute dropdown */
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 60px; /* places below the input (input height 50px + gap) */
+    left: 0;
+    width: 100%;
+    max-width: 360px;
+    margin: 6px 0 0 0;
+    padding: 6px 0;
+    list-style: none;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    z-index: 40;
+    overflow: auto;
+    max-height: 220px;
+}
+
+.search-suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #222;
+}
+
+.search-suggestion-item:hover {
+    background: #f1f5f9;
+}
+
+.search-suggestion-item + .search-suggestion-item {
+    border-top: 1px solid rgba(0,0,0,0.04);
+}
+
+.search input {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.search-suggestion-item .flag {
+    display: inline-block;
+    width: 22px;
+    text-align: center;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.flag-img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 2px;
+}
+
+.flag-placeholder {
+    display: inline-block;
+    width: 20px;
+    height: 14px;
+    margin-right: 8px;
+}
+
 
 .switch-unit-btn {
     margin-top: 2rem;
